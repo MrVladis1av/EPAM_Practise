@@ -7,7 +7,7 @@ public class RotationClass {
     private int[][] matrix;
 
     public RotationClass() {
-        n = (int) (Math.random() * 8) + 1;
+        n = (int) (Math.random() * 8) + 4;
         matrix = new int[n][n];
         fillMathrix();
     }

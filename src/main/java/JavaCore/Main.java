@@ -9,14 +9,14 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-       /* Converter converter = new Converter();
+        Converter converter = new Converter();
         converter.run();
 
         MySearcher searcher = new MySearcher();
         searcher.run();
 
         PyramidBuilder pyramidBuilder = new PyramidBuilder();
-        pyramidBuilder.run();*/
+        pyramidBuilder.run();
 
         RotationClass rotationClass = new RotationClass();
         rotationClass.run();
