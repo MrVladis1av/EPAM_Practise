@@ -10,7 +10,17 @@ public class Controller {
     private Book[] booksList;
 
     public Controller() {
-        booksList = Info.library;
+        booksList = new Book[Info.library.length];
+        for (int i = 0; i < Info.library.length; i++) {
+            booksList[i] = Info.library[i];
+        }
+    }
+
+    public Controller(Book[] library) {
+        booksList = new Book[library.length];
+        for (int i = 0; i < library.length; i++) {
+            booksList[i] = library[i];
+        }
     }
 
     public Book[] getBooksByAuthor(String author) {
@@ -24,7 +34,8 @@ public class Controller {
     public Book[] getBooksByPublishingHouse(String publishingHouse) {
         Book[] booksByPublishingHouse = new Book[7];
         for (int i = 0, j = 0; i < booksList.length; i++) {
-            if (booksList[i].getPublishingHouse().toUpperCase().equals(publishingHouse.toUpperCase())) booksByPublishingHouse[j++] = booksList[i];
+            if (booksList[i].getPublishingHouse().toUpperCase().equals(publishingHouse.toUpperCase()))
+                booksByPublishingHouse[j++] = booksList[i];
         }
         return booksByPublishingHouse;
     }

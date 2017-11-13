@@ -17,11 +17,10 @@ public class Application {
                     "(3)Get boks that was published after specified year.\n" +
                     "(4)Sort books by publishing house.\n" +
                     "(5)Exit.");
-            k = Input.readinteger();
+            k = Input.readInteger();
             switch (k) {
                 case 1: {
                     printBooks(controller.getBooksByAuthor(Input.readString()));
-                    System.out.flush();
                     break;
                 }
                 case 2: {
@@ -29,7 +28,7 @@ public class Application {
                     break;
                 }
                 case 3: {
-                    printBooks(controller.getBooksByYear(Input.readinteger()));
+                    printBooks(controller.getBooksByYear(Input.readInteger()));
                     break;
                 }
                 case 4: {

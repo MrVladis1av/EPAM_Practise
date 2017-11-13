@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Input {
-    public static int readinteger() throws IOException {
+    public static int readInteger() throws IOException {
         return Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine());
     }
 

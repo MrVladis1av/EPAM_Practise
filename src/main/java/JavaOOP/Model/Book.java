@@ -73,4 +73,33 @@ public class Book {
     public String toString() {
         return this.name + " by " + this.author + " was published by " + publishingHouse + " in " + this.yearOfPublishing + " has " + this.quantityOfPages + " pages and costs " + this.price + "$";
     }
+
+    @Override
+    public int hashCode() {
+        int result = 1;
+        result = 17 * result + ((author == null) ? 0 : author.hashCode());
+        result = 17 * result + ((name == null) ? 0 : name.hashCode());
+        long temp = Double.doubleToLongBits(price);
+        result = 17 * result + (int) (temp ^ (temp >>> 32));
+        result = 17 * result + ((publishingHouse == null) ? 0 : publishingHouse.hashCode());
+        result = 17 * result + quantityOfPages;
+        result = 17 * result + yearOfPublishing;
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null) return false;
+        if (getClass() != obj.getClass()) return false;
+
+        Book temp = (Book) obj;
+        if (!name.equals(((Book) obj).name)) return false;
+        if (!author.equals(((Book) obj).author)) return false;
+        if (!publishingHouse.equals(((Book) obj).publishingHouse)) return false;
+        if (yearOfPublishing != ((Book) obj).yearOfPublishing) return false;
+        if (quantityOfPages != ((Book) obj).quantityOfPages) return false;
+        if (price != ((Book) obj).price) return false;
+        return true;
+    }
 }
