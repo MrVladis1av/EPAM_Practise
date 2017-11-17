@@ -8,11 +8,10 @@ import java.io.IOException;
 public class Application {
     public void run() throws IOException {
         Controller controller = new Controller();
-
-
         int k;
         do {
-            System.out.println("(1)Get books by author.\n" +
+            System.out.println("" +
+                    "(1)Get books by author.\n" +
                     "(2)Get books by publishing house.\n" +
                     "(3)Get boks that was published after specified year.\n" +
                     "(4)Sort books by publishing house.\n" +
