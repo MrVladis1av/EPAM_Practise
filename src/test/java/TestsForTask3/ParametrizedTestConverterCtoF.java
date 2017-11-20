@@ -21,13 +21,14 @@ public class ParametrizedTestConverterCtoF {
 
     @Parameterized.Parameters(name = "{index}: {0} Celsius equal to {1} Fahrenheits or {2} Kelvins")
     public static Collection data() {
+
         return Arrays.asList(new Object[][]{
                 {0, 32, 273.15},
                 {1, 33.8, 274.15},
                 {2, 35.6, 275.15},
                 {3, 37.4, 276.15},
                 {4, 39.2, 277.15},
-                {5, 41, 278.15},
+                {5, 41, 278.15}
         });
     }
 

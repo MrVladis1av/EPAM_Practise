@@ -87,13 +87,13 @@ public class Book {
         return result;
     }
 
+
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null) return false;
         if (getClass() != obj.getClass()) return false;
-
-        Book temp = (Book) obj;
         if (!name.equals(((Book) obj).name)) return false;
         if (!author.equals(((Book) obj).author)) return false;
         if (!publishingHouse.equals(((Book) obj).publishingHouse)) return false;
