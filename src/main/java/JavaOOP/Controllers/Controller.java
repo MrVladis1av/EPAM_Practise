@@ -23,10 +23,14 @@ public class Controller {
         }
     }
 
+    public Book[] getAllBooks() {
+        return booksList;
+    }
+
     public Book[] getBooksByAuthor(String author) {
         Book[] booksByAuthor = new Book[7];
         for (int i = 0, j = 0; i < booksList.length; i++) {
-            if (booksList[i].getAuthor().equals(author)) booksByAuthor[j++] = booksList[i];
+            if (booksList[i].getAuthor().toUpperCase().equals(author.toUpperCase())) booksByAuthor[j++] = booksList[i];
         }
         return booksByAuthor;
     }

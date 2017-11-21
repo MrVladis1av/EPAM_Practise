@@ -69,9 +69,17 @@ public class Book {
         this.price = price;
     }
 
+
     @Override
     public String toString() {
-        return this.name + " by " + this.author + " was published by " + publishingHouse + " in " + this.yearOfPublishing + " has " + this.quantityOfPages + " pages and costs " + this.price + "$";
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", author='" + author + '\'' +
+                ", publishingHouse='" + publishingHouse + '\'' +
+                ", yearOfPublishing=" + yearOfPublishing +
+                ", quantityOfPages=" + quantityOfPages +
+                ", price=" + price +
+                '}';
     }
 
     @Override
@@ -86,7 +94,6 @@ public class Book {
         result = 17 * result + yearOfPublishing;
         return result;
     }
-
 
 
     @Override
