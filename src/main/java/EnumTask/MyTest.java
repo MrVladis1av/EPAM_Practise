@@ -6,6 +6,5 @@ public class MyTest {
                 Seasons.values()) {
             System.out.println(seasons.ordinal());
         }
-
     }
 }
