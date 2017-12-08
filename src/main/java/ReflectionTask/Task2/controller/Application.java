@@ -1,13 +1,13 @@
-package ReflectionTask.Task2.controller;
+package ReflectionTask.task2.controller;
 
-import ReflectionTask.Task2.model.ArithmeticOperation;
-import ReflectionTask.Task2.view.Output;
+import ReflectionTask.task2.model.ArithmeticOperation;
+import ReflectionTask.task2.view.Output;
 import ReflectionTask.util.Input;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
-import static ReflectionTask.Task2.view.IMenu.*;
+import static ReflectionTask.task2.view.IMenu.*;
 
 public class Application {
     Output output;

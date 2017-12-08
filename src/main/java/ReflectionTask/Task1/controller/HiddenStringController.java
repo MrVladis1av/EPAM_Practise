@@ -1,6 +1,6 @@
-package ReflectionTask.Task1.controller;
+package ReflectionTask.task1.controller;
 
-import ReflectionTask.Task1.model.HiddenString;
+import ReflectionTask.task1.model.HiddenString;
 
 import java.lang.reflect.Field;
 

@@ -1,4 +1,4 @@
-package ReflectionTask.Task1.view;
+package ReflectionTask.task1.view;
 
 public interface IMenu {
     String PRINT_CURRENT_STRING = "1";

@@ -1,4 +1,4 @@
-package ReflectionTask.Task2.model;
+package ReflectionTask.task2.model;
 
 public class ArithmeticOperation {
     private int value;

@@ -1,6 +1,6 @@
 package ReflectionTask;
 
-import ReflectionTask.Task2.controller.Application;
+import ReflectionTask.task2.controller.Application;
 
 import java.io.IOException;
 

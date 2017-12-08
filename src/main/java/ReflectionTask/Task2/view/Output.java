@@ -1,4 +1,4 @@
-package ReflectionTask.Task2.view;
+package ReflectionTask.task2.view;
 
 public class Output {
     public void printString(String s) {

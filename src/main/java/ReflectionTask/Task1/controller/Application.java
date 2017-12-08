@@ -1,8 +1,8 @@
-package ReflectionTask.Task1.controller;
+package ReflectionTask.task1.controller;
 
-import ReflectionTask.Task1.model.HiddenString;
-import ReflectionTask.Task1.view.IMenu;
-import ReflectionTask.Task1.view.Output;
+import ReflectionTask.task1.model.HiddenString;
+import ReflectionTask.task1.view.IMenu;
+import ReflectionTask.task1.view.Output;
 import ReflectionTask.util.Input;
 
 import java.io.IOException;

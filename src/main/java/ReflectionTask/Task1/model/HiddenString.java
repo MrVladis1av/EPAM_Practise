@@ -1,4 +1,4 @@
-package ReflectionTask.Task1.model;
+package ReflectionTask.task1.model;
 
 public class HiddenString {
     private String string;

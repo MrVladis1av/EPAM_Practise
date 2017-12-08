@@ -1,4 +1,4 @@
-package ReflectionTask.Task2.view;
+package ReflectionTask.task2.view;
 
 public interface IMenu {
     String CREATE_VALUE = "1";

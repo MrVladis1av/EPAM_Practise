@@ -1,6 +1,6 @@
-package ReflectionTask.Task2.controller;
+package ReflectionTask.task2.controller;
 
-import ReflectionTask.Task2.model.ArithmeticOperation;
+import ReflectionTask.task2.model.ArithmeticOperation;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
