@@ -4,6 +4,7 @@ import JavaOOP.Comparators.PublishingHouseComparator;
 import JavaOOP.IO.Info;
 import JavaOOP.Model.Book;
 
+import java.io.*;
 import java.util.Arrays;
 
 public class Controller {
@@ -50,6 +51,33 @@ public class Controller {
             if (booksList[i].getYearOfPublishing() > year) booksByYear[j++] = booksList[i];
         }
         return booksByYear;
+    }
+
+    public void saveToFile(String fileName) {
+        File file = new File("D:\\Git\\EPAM_Practise\\src\\main\\java\\JavaOOP\\Saves\\" + fileName + ".ser");
+        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(file))) {
+            for (int i = 0; i < booksList.length; i++) objectOutputStream.writeObject(booksList[i]);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Book[] getBooksFromFile(String fileName) {
+        Book[] books = new Book[booksList.length];
+        File file = new File("D:\\Git\\EPAM_Practise\\src\\main\\java\\JavaOOP\\Saves\\" + fileName + ".ser");
+        try (ObjectInputStream objectOutputStream = new ObjectInputStream(new FileInputStream(file))) {
+            for (int i = 0; i < booksList.length; i++) {
+                books[i] = (Book) objectOutputStream.readObject();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            return books;
+        }
     }
 
     public Book[] sortBooksByPublishingHouse() {

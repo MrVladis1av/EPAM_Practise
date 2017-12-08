@@ -1,13 +1,10 @@
-package Task5;
+package ReflectionTask;
 
-import Task5.Controller.Application;
-import Task5.Model.Entry;
+import ReflectionTask.Task2.controller.Application;
 
 import java.io.IOException;
 
 public class Main {
-
-
     public static void main(String[] args) {
         try {
             new Application().run();
@@ -15,5 +12,4 @@ public class Main {
             e.printStackTrace();
         }
     }
-
 }

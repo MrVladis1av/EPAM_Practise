@@ -6,13 +6,13 @@ import JavaOOP.IO.Output;
 
 import java.io.IOException;
 
-import static JavaOOP.IO.Info.Menu;
+import static JavaOOP.IO.Info.*;
 
 public class Application {
     public void run() throws IOException {
         Controller controller = new Controller();
         Output printer = new Output();
-        int key = 0;
+        int key;
         do {
             System.out.println(Menu.GREETINGS);
             System.out.println(Menu.MENU);
@@ -45,6 +45,17 @@ public class Application {
                 }
                 case Menu.GET_BOOKS_SORTED_BY_PUBLISHING_HOUSE: {
                     printer.printBooks(controller.sortBooksByPublishingHouse());
+                    break;
+                }
+                case Menu.SAVE_AS_FILE: {
+                    //TODO
+                    printer.printMessage(ISubMenu.CHOOSE_FILE_NAME);
+                    controller.saveToFile(Input.readString());
+                    break;
+                }
+                case Menu.GET_BOOKS_FROM_FILE: {
+                    printer.printMessage(ISubMenu.CHOOSE_FILE_NAME);
+                    printer.printBooks(controller.getBooksFromFile(Input.readString()));
                     break;
                 }
                 case Menu.EXIT: {

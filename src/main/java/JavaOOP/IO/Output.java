@@ -12,6 +12,10 @@ public class Output {
 
     }
 
+    public void printMessage(String s) {
+        System.out.println(s);
+    }
+
     public void errorMessage() {
         System.out.println("Empty list!!!");
     }

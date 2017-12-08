@@ -24,12 +24,21 @@ public interface Info {
                 "(3)Get books by publishing house.\n" +
                 "(4)Get books by year.\n" +
                 "(5)Sort books by publishing house.\n" +
-                "(6)Exit.";
+                "(6)Save books to file.\n" +
+                "(7)Get books from file.\n" +
+                "(8)Exit.";
         int GET_ALL_BOOKS = 1;
         int GET_BOOKS_BY_AUTHOR = 2;
         int GET_BOOKS_BY_PUBLISHING_HOUSE = 3;
         int GET_BOOKS_BY_YEAR = 4;
         int GET_BOOKS_SORTED_BY_PUBLISHING_HOUSE = 5;
-        int EXIT = 6;
+        int SAVE_AS_FILE = 6;
+        int GET_BOOKS_FROM_FILE = 7;
+        int EXIT = 8;
+    }
+
+    interface ISubMenu {
+        String CHOOSE_FILE_NAME = "Please write the file name.";
+
     }
 }

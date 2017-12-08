@@ -126,7 +126,7 @@ public class Entry {
             this.birthday = birthday;
             return this;
         }
-
+ 
         public EntryBuilder phoneNumber(String phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;

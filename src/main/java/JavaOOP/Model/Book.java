@@ -1,6 +1,8 @@
 package JavaOOP.Model;
 
-public class Book {
+import java.io.Serializable;
+
+public class Book implements Serializable {
     private String name;
     private String author;
     private String publishingHouse;
@@ -109,4 +111,6 @@ public class Book {
         if (price != ((Book) obj).price) return false;
         return true;
     }
+
+
 }
